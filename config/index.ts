@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'react-native-demo',
   date: '2023-9-12',
@@ -10,13 +12,10 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   compiler: 'webpack5',
@@ -27,9 +26,7 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-
-        }
+        config: {}
       },
       url: {
         enable: true,
@@ -52,8 +49,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -75,14 +71,20 @@ const config = {
       iosSourcemapOutput: './ios/main.map',
       // iosSourcemapSourcesRoot: '',
       // androidSourceMapUrl: '',
-      androidSourcemapOutput: './android/app/src/main/assets/index.android.map',
+      androidSourcemapOutput: './android/app/src/main/assets/index.android.map'
       // androidSourcemapSourcesRoot: '',
     },
     postcss: {
       cssModules: {
-        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+        enable: false // 默认为 false，如需使用 css modules 功能，则设为 true
       }
     }
+  },
+  alias: {
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@hooks': path.resolve(__dirname, '..', 'src/hooks'),
+    '@store': path.resolve(__dirname, '..', 'src/store')
   }
 }
 

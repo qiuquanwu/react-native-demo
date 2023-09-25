@@ -1,12 +1,32 @@
-import { View, Text } from '@tarojs/components'
-import { add } from '@umworks/lib'
+import { View, Text, Button } from '@tarojs/components'
+import { add, subtract } from '@store'
+import { useCountDispatch, useCountSelector } from '@hooks/count'
+
 import './index.scss'
 
 export default () => {
-	return (
-		<View className="index">
-			<Text>Hello world! dadsa</Text>
-			<Text>{add(11, 11)}</Text>
-		</View>
-	)
+  const count = useCountSelector((state) => state.count.value)
+  const dispatch = useCountDispatch()
+
+  return (
+    <View className='index'>
+      <View className='flex'>
+        <Button
+          onClick={() => {
+            dispatch(add())
+          }}
+        >
+          加
+        </Button>
+        <Text style={{ fontSize: 36, color: 'red', textAlign: 'center' }}>{count}</Text>
+        <Button
+          onClick={() => {
+            dispatch(subtract())
+          }}
+        >
+          减
+        </Button>
+      </View>
+    </View>
+  )
 }
