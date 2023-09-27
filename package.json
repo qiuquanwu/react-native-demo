@@ -69,6 +69,7 @@
     "@tarojs/taro": "3.6.15",
     "@tarojs/taro-rn": "3.6.15",
     "@umworks/lib": "1.0.0",
+    "@umworks/common": "1.0.0",
     "expo": "~47.0.3",
     "expo-av": "~13.0.0",
     "expo-barcode-scanner": "~12.0.0",

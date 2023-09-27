@@ -1,7 +1,7 @@
 import { View, Text, Button } from '@tarojs/components'
 import { add, subtract } from '@store'
 import { useCountDispatch, useCountSelector } from '@hooks/count'
-
+import { clone } from '@umworks/common'
 import './index.scss'
 
 export default () => {
@@ -10,6 +10,7 @@ export default () => {
 
   return (
     <View className='index'>
+      <Text>{typeof clone}</Text>
       <View className='flex'>
         <Button
           onClick={() => {
