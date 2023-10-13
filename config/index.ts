@@ -84,7 +84,8 @@ const config = {
     '@components': path.resolve(__dirname, '..', 'src/components'),
     '@utils': path.resolve(__dirname, '..', 'src/utils'),
     '@hooks': path.resolve(__dirname, '..', 'src/hooks'),
-    '@store': path.resolve(__dirname, '..', 'src/store')
+    '@store': path.resolve(__dirname, '..', 'src/store'),
+    // "@umworks/common":path.resolve(__dirname, '../../../', 'packages/common'),
   }
 }
 

@@ -22,13 +22,13 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@*":["./src/*"],
+      "~/*":["./src/*"],
       "@components/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@store/*": ["./src/store/*"],
     }
   },
-  "include": ["./src", "./types"],
+  "include": ["./src", "./types","../../packages/*"],
   "compileOnSave": false
 }
